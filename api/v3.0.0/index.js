@@ -21,7 +21,7 @@ module.exports = function () {
         "videos"
     ];
 
-    for (var i in apis) {
+    for (var i = 0; i < apis.length; i++) {
         var api = require("./" + apis[i]);
         this[apis[i]] = api;
         this[apis[i]].Client = this;
